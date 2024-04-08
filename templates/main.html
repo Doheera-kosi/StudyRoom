@@ -6,7 +6,16 @@
     <title>StudyRoom</title>
   </head>
   <body>
+
     {% include 'navbar.html' %}
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+          <div>{{ message }}</div>
+        {% endfor %}
+    </ul>
+    {% endif %}
     
     {%block content%}
     
