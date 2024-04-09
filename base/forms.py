@@ -1,13 +1,14 @@
 from django.forms import ModelForm
 from .models import Room
 
-# class RoomForm(ModelForm):
-#   class Meta:
-#     model = Room
-#     fields = '__all__'
-
-
 class RoomForm(ModelForm):
-    class Meta:
-        model = Room
-        exclude = ["created"]
+  class Meta:
+    model = Room
+    fields = '__all__'
+    exclude = ['host', 'participants']
+
+
+# class RoomForm(ModelForm):
+#     class Meta:
+#         model = Room
+#         exclude = ["created"]
