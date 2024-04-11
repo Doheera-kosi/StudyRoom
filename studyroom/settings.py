@@ -28,6 +28,12 @@ INSTALLED_APPS = [
     
     # Add new app below here
     "base.apps.BaseConfig",
+    
+    # DRF-APP
+    'rest_framework',
+    
+    # CORS
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -38,6 +44,10 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    
+    #CORS-MIDDLEWARE
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = "studyroom.urls"
@@ -120,3 +130,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+CORS_ALLOW_ALL_ORIGINS = True
