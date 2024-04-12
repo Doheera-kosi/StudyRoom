@@ -1,4 +1,6 @@
-{%extends 'main.html' %} {%block content%}
+{%extends 'main.html' %}
+
+{%block content%}
 
 <main class="layout">
   <div class="container">
@@ -32,7 +34,7 @@
             class="roomListRoom__author"
           >
             <div class="avatar avatar--small">
-              <img src="https://randomuser.me/api/portraits/women/11.jpg" />
+              <img src="{{message.user.avatar.url}}" />
             </div>
             <p>
               @{{message.user}}
@@ -75,5 +77,4 @@
   </div>
 </main>
 
-<!-- <script src="script.js"></script> -->
 {%endblock%}
